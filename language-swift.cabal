@@ -1,0 +1,29 @@
+name:                language-swift
+version:             0.1.0.0
+synopsis:            Pretty printer for Apple's Swift programming language
+description:         Please see README.md
+homepage:            http://github.com/githubuser/language-swift#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Michael Whitehead
+maintainer:          whitehad1415@gmail.com
+copyright:           2010 Author Here
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Language.Swift.Syntax
+                     , Language.Swift.Pretty
+  build-tools:         alex >= 3.1.3
+  build-depends:       base >= 4.7 && < 5
+                     , pretty >= 1.0
+                     , semigroups
+                     , parsec >= 3.0
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/language-swift
