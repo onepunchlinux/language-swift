@@ -22,13 +22,12 @@ data Stmt
     | Break (Maybe Ident)
     | Continue (Maybe Ident)
     | FallThrough
-    | Return (Maybe Ident)
+    | Return (Maybe Exp)
     | Throw Exp
     | Defer CodeBlock
     | Do CodeBlock [CatchClause]
     | BuildConfigStmt BuildConfig [Stmt] [BuildConfigElseIfClause] (Maybe BuildConfigElseClause)
-    | LineCtrl
-    | LineCtrlWithInfo Int String
+    | LineCtrl (Maybe (Int, String))
       DERIVE
 
 data Loop = ForStmt (Maybe ForInit) (Maybe Exp) (Maybe Exp) CodeBlock
